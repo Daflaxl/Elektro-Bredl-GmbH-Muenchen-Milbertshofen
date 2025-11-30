@@ -1,7 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Ruler, Users, ArrowRight, Lightbulb, Home as HomeIcon } from 'lucide-react';
+import { ShieldCheck, Ruler, Users, ArrowRight, Home as HomeIcon } from 'lucide-react';
 
 const Home = () => {
   const fadeIn = {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import OfferForm from '../components/OfferForm';
 
@@ -37,8 +36,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-bold text-gray-900">Telefon</p>
-                    <a href="tel:+498912345678" className="text-gray-600 hover:text-accent transition-colors block">
-                      (089) 123 456 78
+                    <a href="tel:+49893508181" className="text-gray-600 hover:text-accent transition-colors block">
+                      (089) 350 81 81
                     </a>
                   </div>
                 </div>
@@ -49,8 +48,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-bold text-gray-900">E-Mail</p>
-                    <a href="mailto:info@elektro-bredl.de" className="text-gray-600 hover:text-accent transition-colors block">
-                      info@elektro-bredl.de
+                    <a href="mailto:Elektro-Bredl@Outlook.de" className="text-gray-600 hover:text-accent transition-colors block">
+                      Elektro-Bredl@Outlook.de
                     </a>
                   </div>
                 </div>

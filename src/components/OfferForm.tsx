@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Upload, CheckCircle, AlertCircle, Send } from 'lucide-react';
+import { AlertCircle, Send, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface FormData {
@@ -8,39 +8,27 @@ interface FormData {
   email: string;
   phone: string;
   area: string;
-  file: File | null;
 }
 
 const OfferForm = () => {
+  const WEB3FORMS_ACCESS_KEY = 'ec1ce72e-b1c5-4085-a769-2a5d91054f4c';
+  const formRef = useRef<HTMLFormElement>(null);
+
   const [formData, setFormData] = useState<FormData>({
     name: '',
     address: '',
     email: '',
     phone: '',
-    area: '',
-    file: null
+    area: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
-      if (file.type !== 'application/pdf') {
-        setError('Bitte laden Sie nur PDF-Dateien hoch.');
-        return;
-      }
-      setFormData(prev => ({ ...prev, file: file }));
-      setError(null);
-    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -48,20 +36,51 @@ const OfferForm = () => {
     setIsSubmitting(true);
     setError(null);
 
-    // Simulation einer Server-Anfrage
-    setTimeout(() => {
+    if (!formRef.current) {
+      setError('Formular konnte nicht gefunden werden.');
       setIsSubmitting(false);
-      setIsSuccess(true);
-      // Reset form
-      setFormData({
-        name: '',
-        address: '',
-        email: '',
-        phone: '',
-        area: '',
-        file: null
+      return;
+    }
+
+    try {
+      // FormData aus dem HTML-Formular erstellen
+      const formDataObj = new FormData(formRef.current);
+      formDataObj.append('access_key', WEB3FORMS_ACCESS_KEY);
+      formDataObj.append('to_email', 'Elektro-Bredl@Outlook.de');
+      formDataObj.append('from_name', 'Elektro Bredl Kontaktformular');
+
+      // Web3Forms API aufrufen
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataObj
       });
-    }, 1500);
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        // Erfolg
+        setIsSubmitting(false);
+        setIsSuccess(true);
+        
+        // Formular zurücksetzen
+        formRef.current.reset();
+        setFormData({
+          name: '',
+          address: '',
+          email: '',
+          phone: '',
+          area: ''
+        });
+      } else {
+        // Fehler von Web3Forms
+        setError(data.message || 'Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt unter (089) 350 81 81.');
+        setIsSubmitting(false);
+      }
+    } catch (err: any) {
+      console.error('Fehler beim Senden der E-Mail:', err);
+      setError('Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt unter (089) 350 81 81.');
+      setIsSubmitting(false);
+    }
   };
 
   if (isSuccess) {
@@ -89,7 +108,12 @@ const OfferForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-6 md:p-8 rounded-lg shadow-lg border border-gray-100">
+    <form 
+      id="form"
+      ref={formRef}
+      onSubmit={handleSubmit} 
+      className="bg-white p-6 md:p-8 rounded-lg shadow-lg border border-gray-100"
+    >
       <h3 className="text-2xl font-serif text-primary mb-6">Individuelles Angebot anfordern</h3>
       
       <div className="space-y-5">
@@ -171,48 +195,17 @@ const OfferForm = () => {
           />
         </div>
 
-        {/* Grundriss Upload */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Grundriss (PDF) *</label>
-          <div 
-            onClick={() => fileInputRef.current?.click()}
-            className={`border-2 border-dashed rounded-lg p-6 flex flex-col items-center justify-center cursor-pointer transition-colors ${
-              formData.file ? 'border-accent bg-accent/5' : 'border-gray-300 hover:border-accent hover:bg-gray-50'
-            }`}
-          >
-            <input
-              type="file"
-              ref={fileInputRef}
-              onChange={handleFileChange}
-              accept=".pdf"
-              className="hidden"
-            />
-            {formData.file ? (
-              <div className="text-center">
-                <CheckCircle className="mx-auto h-8 w-8 text-accent mb-2" />
-                <p className="text-sm font-medium text-gray-900">{formData.file.name}</p>
-                <p className="text-xs text-gray-500">Klicken zum Ändern</p>
-              </div>
-            ) : (
-              <div className="text-center">
-                <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />
-                <p className="text-sm font-medium text-gray-900">Datei auswählen oder hierher ziehen</p>
-                <p className="text-xs text-gray-500">Nur PDF Dateien erlaubt</p>
-              </div>
-            )}
+        {error && (
+          <div className="mt-2 text-sm text-red-600 flex items-center">
+            <AlertCircle size={14} className="mr-1" /> {error}
           </div>
-          {error && (
-            <p className="mt-2 text-sm text-red-600 flex items-center">
-              <AlertCircle size={14} className="mr-1" /> {error}
-            </p>
-          )}
-        </div>
+        )}
 
         <button
           type="submit"
-          disabled={isSubmitting || !formData.file}
+          disabled={isSubmitting}
           className={`w-full flex items-center justify-center py-3 px-4 border border-transparent rounded-sm shadow-sm text-white font-medium text-lg transition-all ${
-            isSubmitting || !formData.file 
+            isSubmitting 
               ? 'bg-gray-400 cursor-not-allowed' 
               : 'bg-primary hover:bg-primary-light'
           }`}

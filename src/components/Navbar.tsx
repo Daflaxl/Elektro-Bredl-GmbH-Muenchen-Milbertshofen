@@ -69,11 +69,11 @@ const Navbar = () => {
         <div className="container mx-auto px-4 flex justify-between items-center max-w-6xl">
           <span className="opacity-80">Elektromeisterbetrieb seit 1903</span>
           <div className="flex space-x-6">
-            <a href="tel:+498912345678" className="flex items-center hover:text-accent transition-colors">
-              <Phone size={14} className="mr-2" /> (089) 123 456 78
+            <a href="tel:+49893508181" className="flex items-center hover:text-accent transition-colors">
+              <Phone size={14} className="mr-2" /> (089) 350 81 81
             </a>
-            <a href="mailto:info@elektro-bredl.de" className="flex items-center hover:text-accent transition-colors">
-              <Mail size={14} className="mr-2" /> info@elektro-bredl.de
+            <a href="mailto:Elektro-Bredl@Outlook.de" className="flex items-center hover:text-accent transition-colors">
+              <Mail size={14} className="mr-2" /> Elektro-Bredl@Outlook.de
             </a>
           </div>
         </div>
@@ -157,11 +157,11 @@ const Navbar = () => {
               </a>
               
               <div className="mt-6 pt-6 border-t border-gray-100 flex flex-col space-y-3 text-sm text-gray-600">
-                <a href="tel:+498912345678" className="flex items-center">
-                  <Phone size={16} className="mr-3 text-accent" /> (089) 123 456 78
+                <a href="tel:+49893508181" className="flex items-center">
+                  <Phone size={16} className="mr-3 text-accent" /> (089) 350 81 81
                 </a>
-                <a href="mailto:info@elektro-bredl.de" className="flex items-center">
-                  <Mail size={16} className="mr-3 text-accent" /> info@elektro-bredl.de
+                <a href="mailto:Elektro-Bredl@Outlook.de" className="flex items-center">
+                  <Mail size={16} className="mr-3 text-accent" /> Elektro-Bredl@Outlook.de
                 </a>
               </div>
             </div>

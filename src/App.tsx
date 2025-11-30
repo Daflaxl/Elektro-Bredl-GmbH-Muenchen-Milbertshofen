@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from './components/Navbar';
 import OnePage from './pages/OnePage';
 import Footer from './components/Footer';

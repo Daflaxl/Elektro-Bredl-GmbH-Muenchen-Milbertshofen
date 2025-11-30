@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Home, Zap, PenTool, Shield, CheckCircle2, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
