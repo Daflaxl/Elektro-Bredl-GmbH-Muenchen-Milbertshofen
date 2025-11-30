@@ -127,17 +127,6 @@ const Impressum = () => {
                 </p>
               </div>
 
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Datenschutz (§ 13 TMG, DSGVO)</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf 
-                  unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben 
-                  werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre 
-                  ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung 
-                  im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser 
-                  Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
-                </p>
-              </div>
             </div>
           </section>
 

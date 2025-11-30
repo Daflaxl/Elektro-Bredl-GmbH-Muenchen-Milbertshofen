@@ -67,7 +67,7 @@ const Footer = () => {
           <p>&copy; {new Date().getFullYear()} Elektro Bredl GmbH. Alle Rechte vorbehalten.</p>
           <div className="mt-2 space-x-4">
             <Link to="/impressum" className="hover:text-gray-300">Impressum</Link>
-            <a href="#" className="hover:text-gray-300">Datenschutz</a>
+            <Link to="/datenschutz" className="hover:text-gray-300">Datenschutz</Link>
           </div>
         </div>
       </div>

@@ -70,7 +70,7 @@ const CookieBanner = () => {
                 </p>
                 <p className="text-xs text-gray-500">
                   Weitere Informationen finden Sie in unserer{' '}
-                  <a href="#" className="text-accent hover:underline">Datenschutzerklärung</a>.
+                  <a href="/datenschutz" className="text-accent hover:underline">Datenschutzerklärung</a>.
                 </p>
               </div>
 

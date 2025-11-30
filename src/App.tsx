@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import OnePage from './pages/OnePage';
 import Impressum from './pages/Impressum';
+import Datenschutz from './pages/Datenschutz';
 import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
 
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<OnePage />} />
             <Route path="/impressum" element={<Impressum />} />
+            <Route path="/datenschutz" element={<Datenschutz />} />
           </Routes>
         </main>
         <Footer />
