@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ShieldCheck, Ruler, Users, ArrowRight, Home as HomeIcon, Home, Zap, PenTool, Shield, CheckCircle2, Clock, MapPin, Award, Phone, Mail } from 'lucide-react';
+import { ShieldCheck, Ruler, Users, ArrowRight, Home, Zap, PenTool, Shield, CheckCircle2, Clock, MapPin, Award, Phone, Mail } from 'lucide-react';
 import OfferForm from '../components/OfferForm';
 
 const OnePage = () => {
@@ -132,9 +132,12 @@ const OnePage = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-1/2">
-              <div className="relative bg-gray-100 rounded-lg overflow-hidden aspect-[4/3] flex items-center justify-center bg-primary/5">
-                 <HomeIcon size={64} className="text-primary/20" />
-                 <div className="absolute inset-0 border-2 border-accent/20 m-4 rounded" />
+              <div className="relative rounded-lg overflow-hidden aspect-[4/3]">
+                <img 
+                  src="/Milbertshofen Ansicht Archiv.jpg" 
+                  alt="Historische Ansicht von Milbertshofen" 
+                  className="w-full h-full object-cover rounded-lg"
+                />
               </div>
             </div>
             <div className="w-full md:w-1/2">
