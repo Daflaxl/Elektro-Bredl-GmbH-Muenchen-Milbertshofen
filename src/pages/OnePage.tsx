@@ -80,8 +80,8 @@ const OnePage = () => {
               className="flex-shrink-0 w-full lg:w-auto lg:max-w-lg xl:max-w-xl flex"
             >
               <img 
-                src="/Milbertshofen Ansicht Archiv.jpg" 
-                alt="Historische Ansicht von Milbertshofen" 
+                src="/elektriker.jpg" 
+                alt="Elektriker bei der Arbeit" 
                 className="w-full h-full rounded-lg shadow-2xl object-cover"
               />
             </motion.div>
