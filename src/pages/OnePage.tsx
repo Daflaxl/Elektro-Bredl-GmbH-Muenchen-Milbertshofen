@@ -22,7 +22,7 @@ const OnePage = () => {
             transition={{ duration: 0.5 }}
             className="inline-block py-1 px-3 border border-accent/50 rounded-full text-accent text-sm font-medium tracking-wide mb-6"
           >
-            SEIT 1903 IN MÜNCHEN
+            SEIT 1903 IN MILBERTSHOFEN
           </motion.span>
           
           <div className="flex flex-col lg:flex-row items-stretch gap-8 lg:gap-16">
@@ -443,7 +443,7 @@ const OnePage = () => {
                   </div>
                   <div className="flex justify-between border-b border-white/10 pb-2">
                     <span>Freitag</span>
-                    <span>07:30 - 13:00 Uhr</span>
+                    <span>07:30 - 17:00 Uhr</span>
                   </div>
                   <div className="flex justify-between pt-2">
                     <span>Sa - So</span>
