@@ -20,13 +20,15 @@ const Maintenance = () => {
         
         <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
           <p className="text-gray-700 mb-4">
-            Bei dringenden Anfragen erreichen Sie uns unter:
+            Bei dringenden Anfragen erreichen Sie:
           </p>
-          <p className="text-xl font-semibold text-primary">
-            (089) 350 81 81
+          <p className="text-xl font-semibold text-primary mb-2">
+            Felix Bredl
           </p>
-          <p className="text-lg text-gray-600 mt-2">
-            Elektro-Bredl@Outlook.de
+          <p className="text-lg text-gray-600">
+            <a href="tel:+4915119784023" className="hover:text-accent transition-colors">
+              +49 151 19784023
+            </a>
           </p>
         </div>
         
