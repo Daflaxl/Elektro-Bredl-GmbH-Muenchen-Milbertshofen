@@ -22,7 +22,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-3xl font-serif font-bold text-primary mb-6">Elektro Bredl – Seit 1903</h2>
+              <h2 className="text-3xl font-serif font-bold text-primary mb-6">Elektro B-Punkt – Seit 1903</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Seit über 120 Jahren steht der Name Bredl in München-Milbertshofen für handwerkliche Exzellenz. 
                 Was einst von Urgroßvater Bredl als kleiner Betrieb für elektrische Anlagen gegründet wurde, 

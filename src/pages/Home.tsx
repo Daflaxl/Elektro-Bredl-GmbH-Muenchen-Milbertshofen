@@ -123,7 +123,7 @@ const Home = () => {
             </div>
             <div className="w-full md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">
-                Elektro Bredl: Ein Name, der verpflichtet.
+                Elektro B-Punkt: Ein Name, der verpflichtet.
               </h2>
               <p className="text-gray-600 mb-6 text-lg leading-relaxed">
                 Seit 1903 sind wir in München-Milbertshofen zuhause. Was als kleiner Handwerksbetrieb begann, 

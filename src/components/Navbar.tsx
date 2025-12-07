@@ -85,7 +85,7 @@ const Navbar = () => {
           {/* Logo */}
           <a href="#start" onClick={(e) => handleNavClick(e, '#start')} className="flex flex-col">
             <span className="text-2xl font-serif font-bold text-primary tracking-tight">
-              ELEKTRO BREDL
+              ELEKTRO B-PUNKT
             </span>
             <span className="text-xs text-accent font-medium tracking-widest uppercase">
               GmbH &bull; München

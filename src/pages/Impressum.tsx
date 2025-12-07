@@ -27,7 +27,7 @@ const Impressum = () => {
               Firmendaten
             </h2>
             <div className="space-y-3 text-gray-700">
-              <p className="font-bold text-gray-900">Elektro Bredl GmbH</p>
+              <p className="font-bold text-gray-900">Elektro B-Punkt GmbH</p>
               <div className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 text-accent flex-shrink-0" />
                 <p>Schopenhauerstr. 94<br />80809 München</p>

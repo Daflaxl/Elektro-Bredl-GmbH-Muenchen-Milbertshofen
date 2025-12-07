@@ -9,7 +9,7 @@ const Footer = () => {
           
           {/* Brand */}
           <div>
-            <h2 className="text-2xl font-serif font-bold mb-4 tracking-tight">ELEKTRO BREDL</h2>
+            <h2 className="text-2xl font-serif font-bold mb-4 tracking-tight">ELEKTRO B-PUNKT</h2>
             <p className="text-gray-400 mb-6 text-sm leading-relaxed">
               Ihr Meisterbetrieb für Elektroinstallationen in München. 
               Qualität und Tradition seit 1903.
@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 pt-8 text-center text-gray-500 text-xs">
-          <p>&copy; {new Date().getFullYear()} Elektro Bredl GmbH. Alle Rechte vorbehalten.</p>
+          <p>&copy; {new Date().getFullYear()} Elektro B-Punkt GmbH. Alle Rechte vorbehalten.</p>
           <div className="mt-2 space-x-4">
             <Link to="/impressum" className="hover:text-gray-300">Impressum</Link>
             <Link to="/datenschutz" className="hover:text-gray-300">Datenschutz</Link>

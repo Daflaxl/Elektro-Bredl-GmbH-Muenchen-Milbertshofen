@@ -49,7 +49,7 @@ const OfferForm = () => {
       const formDataObj = new FormData(formRef.current);
       formDataObj.append('access_key', WEB3FORMS_ACCESS_KEY);
       formDataObj.append('to_email', 'Elektro-Bredl@Outlook.de');
-      formDataObj.append('from_name', 'Elektro Bredl Kontaktformular');
+      formDataObj.append('from_name', 'Elektro B-Punkt Kontaktformular');
 
       // Web3Forms API aufrufen
       const response = await fetch('https://api.web3forms.com/submit', {

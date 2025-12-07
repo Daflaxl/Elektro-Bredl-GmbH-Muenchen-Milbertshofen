@@ -87,7 +87,7 @@ const Datenschutz = () => {
                 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
               </p>
               <div className="bg-gray-50 p-4 rounded-lg mt-4">
-                <p className="font-bold text-gray-900">Elektro Bredl GmbH</p>
+                <p className="font-bold text-gray-900">Elektro B-Punkt GmbH</p>
                 <p>Schopenhauerstr. 94</p>
                 <p>80809 München</p>
                 <p className="mt-3">
@@ -282,7 +282,7 @@ const Datenschutz = () => {
               <div className="bg-gray-50 p-4 rounded-lg mt-4">
                 <p className="font-semibold text-gray-900 mb-2">Kontakt für Datenschutzanfragen:</p>
                 <p className="text-sm">
-                  Elektro Bredl GmbH<br />
+                  Elektro B-Punkt GmbH<br />
                   Schopenhauerstr. 94<br />
                   80809 München<br />
                   E-Mail: <a href="mailto:Elektro-Bredl@Outlook.de" className="text-accent hover:text-accent-light">Elektro-Bredl@Outlook.de</a>
